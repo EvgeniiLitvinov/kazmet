@@ -1,0 +1,20 @@
+<svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip4_3171">
+			<rect id="ico" rx="-0.031250" width="31.937500" height="31.937500" transform="translate(16.031252 16.031250)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip4_3170">
+			<rect id="ico" rx="24.500000" width="49.000000" height="49.000000" transform="translate(0.500002 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip4_3170)">
+		<rect id="ico" rx="-0.031250" width="31.937500" height="31.937500" transform="translate(16.031252 16.031250)" fill="#FFFFFF" fill-opacity="0"/>
+		<g clip-path="url(#clip4_3171)">
+			<path id="Vector" d="M24.08 26.15L16.7 21.23C16.48 21.08 16.3 20.89 16.18 20.66C16.06 20.43 15.99 20.17 16 19.91C16 19 16.74 18.25 17.65 18.25L32.34 18.25C33.25 18.25 34 19 34 19.91C34 20.44 33.73 20.93 33.29 21.23L25.91 26.15C25.64 26.33 25.32 26.42 25 26.42C24.68 26.42 24.36 26.33 24.08 26.15ZM25 27.48C25.53 27.48 26.05 27.32 26.5 27.02L33.87 22.11C33.92 22.08 33.96 22.05 34 22.02L34 30.08C34 30.99 33.26 31.74 32.34 31.74L17.65 31.74C16.74 31.74 16 31 16 30.08L16 22.02C16.03 22.05 16.07 22.08 16.11 22.11L23.49 27.02C23.94 27.32 24.46 27.48 25 27.48Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+	<rect id="ico" rx="24.500000" width="49.000000" height="49.000000" transform="translate(0.500002 0.500000)" stroke="#FFFFFF" stroke-opacity="0.500000" stroke-width="1.000000"/>
+</svg>

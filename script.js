@@ -1,0 +1,58 @@
+const navBtn = document.querySelector('.nav__item')
+const navMenu = document.querySelector('.nav__menu')
+const mainBlock = document.querySelector('.main')
+const headerBlock = document.querySelector('.header')
+const afterNav = document.querySelector('.nav__item-rectangle')
+
+navBtn.addEventListener('click', function(e) {
+    navMenu.classList.toggle('menu__visible')
+    navBtn.classList.toggle('hover__effect')
+    afterNav.classList.toggle('transform')
+    e.stopPropagation()
+})
+
+
+
+window.addEventListener('keydown', function(e) {
+    if (e.key == 'Escape') {
+        navMenu.classList.remove('menu__visible')
+        navBtn.classList.remove('hover__effect')
+        afterNav.classList.remove('transform')
+    }
+})
+
+mainBlock.addEventListener('click', function() {
+    navMenu.classList.remove('menu__visible')
+    navBtn.classList.remove('hover__effect')
+    afterNav.classList.remove('transform')
+})
+
+headerBlock.addEventListener('click', function() {
+    navMenu.classList.remove('menu__visible')
+    navBtn.classList.remove('hover__effect')
+    afterNav.classList.remove('transform')
+})
+
+// SLIDE
+
+const copy = document.querySelector('.logos-slide').cloneNode(true)
+document.querySelector('.logos').appendChild(copy)
+
+// BURGER
+
+const menuBurger = document.querySelector('.burger')
+const navigation = document.querySelector('.header__nav')
+const burgerClose = document.querySelector('.burger-close')
+const burgerMenu = document.querySelector('.burger-menu')
+const languageBtns = document.querySelector('.language-btns')
+const footerBurger = document.querySelector('.footer__burger')
+
+menuBurger.addEventListener('click', function(e) {
+    menuBurger.classList.toggle('active')
+    navigation.classList.toggle('open')
+    burgerClose.classList.toggle('open-burger')
+    burgerMenu.classList.toggle('close-burger')
+    languageBtns.classList.toggle('open-language-btns')
+    footerBurger.classList.toggle('footer__burger-active')
+})
+
