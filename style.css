@@ -551,6 +551,7 @@ p {
 
 .internships {
     background-color: rgba(197, 197, 197, 0.267);
+    position: relative;
 }
 
 .interships__block {
@@ -612,7 +613,7 @@ p {
 }
 
 .internships__cards {
-    position: relative;
+    
     gap: 30px;
     overflow: hidden;
 }
@@ -622,6 +623,7 @@ p {
     display: flex;
     column-gap: 30px;
     padding-bottom: 90px;
+    transition: transform 0.5s ease;
 }
 
 .card img {
@@ -647,13 +649,20 @@ p {
     transition: opacity 0.5s ease;
 }
 
+.internships__cards button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .pre-btn {
-    left: 0;
+    left: 112px;
     transform: rotate(180deg);
+    top: 65px;
 }
 
 .next-btn {
-    right: 0;
+    right: 112px;
+    top: 65px;
 }
 
 .pre-btn:hover img,

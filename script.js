@@ -56,3 +56,111 @@ menuBurger.addEventListener('click', function(e) {
     footerBurger.classList.toggle('footer__burger-active')
 })
 
+// SLIDER 
+
+
+
+
+
+
+const slider = document.querySelector('.internship__container')
+const prevBtn = document.querySelector('.pre-btn')
+const nextBtn = document.querySelector('.next-btn')
+
+let currentSlide = 0
+const totalSlides = document.querySelectorAll('.internships-slider').length
+let visibleSlides = 3
+let slideWidth = 370
+
+
+function updateVisibleSlides() {
+    if (window.innerWidth <= 768) {
+    visibleSlides = 1
+    } else {
+    visibleSlides = 3
+    }
+    updateSliderPosition()
+    checkButtonsVisibility()
+}
+
+
+function updateSliderPosition() {
+  const offset = -currentSlide * slideWidth
+    slider.style.transform = `translateX(${offset}px)`
+}
+
+
+function checkButtonsVisibility() {
+    if (currentSlide >= totalSlides - visibleSlides) {
+    nextBtn.classList.add('hidden')
+    } else {
+    nextBtn.classList.remove('hidden')
+    }
+
+    if (currentSlide <= 0) {
+    prevBtn.classList.add('hidden')
+    } else {
+    prevBtn.classList.remove('hidden')
+    }
+}
+
+// Логика кнопок
+nextBtn.addEventListener('click', () => {
+    if (currentSlide < totalSlides - visibleSlides) {
+    currentSlide++
+    updateSliderPosition()
+    }
+    checkButtonsVisibility()
+})
+
+prevBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+    currentSlide--
+    updateSliderPosition()
+    }
+    checkButtonsVisibility()
+})
+
+
+let startX = 0
+let isDragging = false
+
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX
+    isDragging = true
+})
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return
+    const currentX = e.touches[0].clientX
+    const diffX = startX - currentX
+
+    if (diffX > 50) {
+    if (currentSlide < totalSlides - visibleSlides) {
+        currentSlide++
+    }
+    } else if (diffX < -50) {
+    if (currentSlide > 0) {
+        currentSlide--
+    }
+    }
+    updateSliderPosition()
+    checkButtonsVisibility()
+    isDragging = false
+})
+
+slider.addEventListener('touchend', () => {
+    isDragging = false
+})
+
+
+updateVisibleSlides()
+window.addEventListener('resize', updateVisibleSlides)
+
+
+checkButtonsVisibility()
+
+
+
+
+
