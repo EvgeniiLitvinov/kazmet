@@ -74,7 +74,7 @@ let slideWidth = 370
 
 
 function updateVisibleSlides() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 900) {
     visibleSlides = 1
     } else {
     visibleSlides = 3
@@ -104,7 +104,7 @@ function checkButtonsVisibility() {
     }
 }
 
-// Логика кнопок
+
 nextBtn.addEventListener('click', () => {
     if (currentSlide < totalSlides - visibleSlides) {
     currentSlide++
